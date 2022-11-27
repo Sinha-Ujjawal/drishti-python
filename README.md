@@ -1,6 +1,6 @@
-## Flask API ([Drishti Hackerearth Backend Nov - 2022](https://assessment.hackerearth.com/challenges/new/hiring/drishti-backend-engineer-hiring-challenge/))
+## FastApi API ([Drishti Hackerearth Backend Nov - 2022](https://assessment.hackerearth.com/challenges/new/hiring/drishti-backend-engineer-hiring-challenge/))
 
-Flask API to return list of valid words that can be formed using given at-most 5 words.
+FastApi API to return list of valid words that can be formed using given at-most 5 words.
 
 ### Prerequisites
 
@@ -14,19 +14,19 @@ Using [python>=3.7.6](https://www.python.org/downloads/release/python-376/)
 python -m pip install -r requirements.txt
 ```
 
-2. Run `run.py` to start the server at port `3030`
+2. Serve on `uvicorn`. It will serve on port `8000` by default
 
 ```console
-python run.py
+uvicorn run:app
 ```
 
-3. Then hit the endpoint `/words` as `POST` request, given `json` data as below-
+3. Then hit the endpoint `/words` as `POST` request, given `json` data as below. Or visit [localhost:8000/docs](http://localhost:8000/docs) to visit SwaggerUI and try out the API there.
 
 ```json
 { "words": ["some-word", "some-other-word"] }
 ```
 
-4. You can change the default configuration by changing [config.toml](./config.toml) to your needs
+4. You can change the default configuration by changing [config.py](./config.py) to your needs
 
 ### References
 
